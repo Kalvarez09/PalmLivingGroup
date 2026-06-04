@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es"> 
+
+    <head>    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css?v=11">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" type="image/png" href="./imagenes/favicon-plg-modified.png">
+        <title>Palm Living Group</title>
+
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        
+        <!-- Font Awesome (For icons) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+
+    <body>
+
+        <header class="header">
+            <nav class="navbar">
+                <img class="img logo" src="./imagenes/plg-icon.png" height="120px">
+
+                <ul class="navbar-items">
+                    <li><a href="index.html">Home</a></li>
+
+    <li>
+        <a href="index.html#propiedades">
+            Propiedades
+        </a>
+    </li>
+
+    <li>
+        <a href="index.html#sobre-nosotros">
+            Sobre Nosotros
+        </a>
+    </li>
+
+    <li>
+        <a href="#contacto" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'}); history.replaceState(null,'',window.location.pathname); return false;">
+            Contacto
+        </a>
+    </li>
+                    
+                </ul>
+
+            </nav>
+        </header>
+
+
+        <!-- MAIN PAGE GRID -->
+        <div class="page-layout">
+
+            <!-- ========== LEFT COLUMN ========== -->
+            <div class="left-column">
+
+                <!-- GALLERY -->
+                <div class="gallery-wrap">
+                    <div class="main-image-wrap" id="mainWrap">
+                        <span class="status-badge">En Renta</span>
+                        <img id="mainImg" src="" alt=""/>
+                        <button class="img-nav prev" id="prevBtn">&#8592;</button>
+                        <button class="img-nav next" id="nextBtn">&#8594;</button>
+                        <div class="img-counter" id="imgCounter">1 / 14</div>
+                    </div>
+                    <div class="thumbnails" id="thumbnails"></div>
+                </div>
+
+                <!-- PROPERTY DETAILS -->
+                <section class="characteristics-spsHouse">
+                    <div class="containter-characteristics">
+
+                        <div class="titledescritpion">
+                            <h2 style="font-family: 'Times New Roman', Times, serif; font-weight: 550;"">Casa Mediterranea de Lujo</h2>
+                            <span class="status-badgeChar">En Renta</span>
+                        </div>
+
+                        <p class="textchar locationchar">
+                            <i class="fa-solid fa-location-dot" style="color: rgb(81, 87, 99);"></i>
+                            <a style=" color: black;"  target="_blank" href="https://www.google.com/maps/place/15%C2%B033'12.3%22N+88%C2%B001'57.6%22W/@15.5533197,-88.0328403,20.25z/data=!4m4!3m3!8m2!3d15.5534028!4d-88.0326528?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D">Residencial Puerta Del Sol, San Pedro Sula, Cortés, Honduras</a>
+                        </p>
+
+                        <h3 class="char-price">USD 2300/mes</h3>
+
+                        <div class="descriptionFlex">
+                            <hr class="description-line">
+
+                            <div class="inside-descriptions">
+
+                                <div class="info-char">
+
+                                    <div class="bedrooms">
+
+                                        <i class="fa-solid fa-bed iconhousedetail" style="color: rgb(173, 135, 59);"></i>
+                                        <p class="numdetail">4</p>
+                                        <p class="textchar">Habitaciones</p>
+
+                                    </div>
+
+                                    <div class="baths">
+
+                                        <i class="fa-solid fa-bath iconhousedetail" style="color: rgb(173, 135, 59);"></i>
+                                        <p class="numdetail">5</p>
+                                        <p class="textchar">Baños</p>
+
+                                    </div>
+
+                                    <div class="metersSquared">
+                                        <i class="fa-solid fa-expand iconhousedetail" style="color: rgb(173, 135, 59);"></i>
+                                        <p class="numdetail">480</p>
+                                        <p class="textchar">Metros Cuadrados</p>
+
+                                    </div>
+
+                                </div>
+
+                                <hr class="description-line">
+                            </div>
+
+                        </div>
+
+                        <h3 class="titlechar" style="font-family: 'Times New Roman', Times, serif; font-weight: 550;">Descripción</h3>
+                        <p class="textchar">
+                            Experimenta un lujo sin igual en esta impresionante villa moderna.
+                            Con techos altos, ventanales de piso a techo y un diseño de concepto
+                            abierto que fusiona perfectamente la vida interior y exterior.
+                            La propiedad cuenta con acabados de alta gama en todas partes,
+                            incluyendo encimeras de mármol, gabinetes personalizados y accesorios de diseñador.
+                        </p>
+
+                    </div>
+                </section>
+
+                <!-- AMENITIES -->
+                <div class="amenities-container">
+                    <div class="amenities-characteristics">
+                        <h3 class="titlechar" style="font-family: 'Times New Roman', Times, serif; font-weight: 550;">Amenidades</h3>
+                        <div class="amenities textchar">
+                            <div class="amenities1-4">
+                                <p class=""><i class="fa-solid fa-circle-check" style="color: rgb(173, 135, 59);"></i> Piscina</p>
+                                <p class=""><i class="fa-solid fa-circle-check" style="color: rgb(173, 135, 59);"></i> Casa Club</p>
+                                <p><i class="fa-solid fa-circle-check" style="color: rgb(173, 135, 59);"></i> Complejo privado con seguridad</p>
+                                <p><i class="fa-solid fa-circle-check" style="color: rgb(173, 135, 59);"></i> Rooftop con Vista 360°</p>
+                                <p><i class="fa-solid fa-circle-check" style="color: rgb(173, 135, 59);"></i> Climatizada</p>
+
+                            </div>
+                            <div class="amenities5-8">
+                                <p><i class="fa-solid fa-circle-check" style="color: rgb(173, 135, 59);"></i> Jacuzzi</p>
+                                <p><i class="fa-solid fa-circle-check" style="color: rgb(173, 135, 59);"></i> Walking Closet</p>
+                                <p><i class="fa-solid fa-circle-check" style="color: rgb(173, 135, 59);"></i> Balcones Privados</p>
+                                <p><i class="fa-solid fa-circle-check" style="color: rgb(173, 135, 59);"></i> Garage techado para 2 vehículos</p>
+                                <p><i class="fa-solid fa-circle-check" style="color: rgb(173, 135, 59);"></i> Deck Exterior</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- ========== END LEFT COLUMN ========== -->
+
+
+            <!-- ========== RIGHT COLUMN ========== -->
+            <div class="right-column">
+                <section class="contact-div">
+                    <div class="container-contact">
+                        <p class="contact-agenttitle">Contactar</p>
+                        <div class="items-contact">
+
+                            <a href="https://wa.me/50498547689" target="_blank">
+                                <button class="contact-button whatsapp">
+                                    <i class="fa-regular fa-message icon-contact" style="color: rgb(255,255,255); font-size: 12px;"></i> Whatsapp
+                                </button>
+                            </a>
+
+                            <a href="tel:+50498547689" target="_blank">
+                                <button class="contact-button call">
+                                    <i class="fa-solid fa-phone call-icon icon-contact"></i> Llamar Ahora
+                                </button>
+                            </a>
+
+
+                            <a href="mailto:info@palmlivinggroup.com">
+                                <button class="contact-button email">
+                                    <i class="fa-solid fa-envelope email-icon icon-contact"></i> Enviar Email
+                                </button>
+                            </a>
+                            <hr class="contact-line">
+                        </div>
+                        <div class="contact-callMail">
+                            <p><i class="fa-solid fa-phone" style="color: rgb(81,87,99);"></i> +504 9854-7689</p>
+                            <p>
+                                <i class="fa-solid fa-envelope" style="color: rgb(81,87,99);"></i>
+                                <a class="emailbut" href="mailto:info@palmlivinggroup.com"> info@palmlivinggroup.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- ========== END RIGHT COLUMN ========== -->
+
+        </div>
+        <!-- END PAGE GRID -->
+
+
+        <!-- Lightbox OUTSIDE the grid -->
+        <div class="lightbox" id="lightbox">
+            <button class="lightbox-close" id="lbClose">✕</button>
+            <button class="lightbox-nav lightbox-prev" id="lbPrev">&#8592;</button>
+            <img src="" alt="Vista ampliada" id="lbImg"/>
+            <button class="lightbox-nav lightbox-next" id="lbNext">&#8594;</button>
+        </div>
+
+
+        <footer id="contacto">
+            <div class="footer-sections">
+                <div class="footer-column1">
+                    <img class="plg-footerIcon" src="./imagenes/plg-footer-icon.png" height="180px" width="300px">
+                    <p class="paragraph-footer" style="color: white;">Te ayudamos a encontrar la propiedad<br> ideal para ti. Confianza, transparencia<br> y atención personalizada.</p>
+                    <div class="social-media-Icons">
+                        <a href="https://www.instagram.com/palmlivinggroup.hn/" target="_blank"><i class="fa-brands fa-instagram" style="color: rgb(173, 135, 59);"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61564494482481&locale=es_LA" target="_blank"><i class="fa-brands fa-facebook" style="color: rgb(173, 135, 59);"></i></a>
+                        <a href="mailto:info@palmlivinggroup.com" target="_blank"><i class="fa-regular fa-envelope" style="color: rgb(173, 135, 59);"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column2">
+                    <p class="title-footer">Navegación</p>
+                    <hr class="border-footer">
+                    <p class="subheading-footer"><i class="footer-icons fa-solid fa-house" style="color: rgb(173, 135, 59);"></i>Propiedades</p>
+                    <p class="subheading-footer"><i class="footer-icons fa-solid fa-address-book" style="color: rgb(173, 135, 59);"></i>Contacto</p>
+                    <p class="subheading-footer"><i class="footer-icons fa-solid fa-info" style="color: rgb(173, 135, 59);"></i>Sobre Nosotros</p>
+                </div>
+
+                <div class="footer-column3">
+                    <p class="title-footer">Contáctenos</p>
+                    <hr class="border-footer">
+                    <p class="subheading-footer"><i class="footer-icons fa-solid fa-phone" style="color: rgb(173, 135, 59);"></i>+504 9854-7689</p>
+                    <a class="emailbut" href="mailto:info@palmlivinggroup.com"><p class="subheading-footer"><i class="footer-icons fa-solid fa-at" style="color: rgb(173, 135, 59);"></i>info@palmlivinggroup.com</p></a>
+                    <p class="subheading-footer"><i class="footer-icons fa-solid fa-clock" style="color: rgb(173, 135, 59);"></i>Lun - Vie: 8:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+
+            <div class="noCopyright-section">
+                <hr class="copyright-line">
+                <p class="noCopyright-text">© 2026 Palm Living Group. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="./index.js?v=11"></script>
+    </body>
+</html>

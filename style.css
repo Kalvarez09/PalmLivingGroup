@@ -1,0 +1,1097 @@
+.header{
+    position: sticky;
+    top: 0;         
+    z-index: 10;
+    width: 100%;
+    background: white;
+    border-bottom: #ad873b double 5px; 
+}
+
+.logo{
+    padding-left: 10px ;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+}
+
+/* Align content at the end of site */
+
+.navbar ul{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-right: 30px;
+    background-color: white;
+    height: 40px;
+    align-items: center;
+
+
+}
+
+/* Remove underline and change color of nav items
+*/
+.navbar-items a{
+    text-decoration: none;
+    color: black;
+    font-size: 22px
+
+}
+
+.emailbut {
+    text-decoration: none;
+    color: black;
+    
+}
+
+/* Whatsapp Icon */
+
+.whatsapp-ico{
+    fill: white;
+    width: 75px;
+    height: 75px;
+    padding: 3px;
+    background-color: #4dc247;
+    border-radius: 50%;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+    position: fixed;
+    bottom: 20px;
+    right : 20px;
+    z-index: 10;
+}
+
+.whatsapp-ico:hover{
+    box-shadow: 2px 2px 11px rgba(0,0,0,0.7);
+} 
+
+
+#propiedades, #contacto, #sobre-nosotros{
+    scroll-margin-top: 350px;
+
+}
+
+.backgroundImg{
+    width: 100%;
+    height: 650px;
+}
+
+/*HOME PORTFOLIO TEXT*/
+
+
+.h2Text{
+    font-size: 60px;
+    text-align: center;
+    
+}
+
+.portfolio{
+    padding-top: 40px;
+    text-align: center;
+    color: #cc8f33;
+    font-size: 19px;
+    font-weight: 450;
+    letter-spacing: 3px;
+}
+
+.home-line{
+
+    width: 150px;
+    height: 3.5px;             
+    background-color: #cc8f33;
+    border: none;
+
+}
+
+
+.portfolio-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+/* PROPERTIES AVAILABLE */
+
+.propertiesHome{
+    padding-top: 30px;
+}
+
+.homes{
+    padding-top: 30px;
+}
+
+.boldsps{
+    font-weight: bold;
+    font-style: italic;
+}
+
+.hero-heading{
+    color: white;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+    font-size: 70px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.hero-par{
+    color: white;
+    font-size: 30px;
+
+}
+
+.hero-button{
+    height: 55px;
+    width: 280px;
+    font-size: 25px;
+    color: white;
+    background-image: linear-gradient (to left, #bc9b59, white);
+    background-color: #ad873b;
+    border-radius: 10px;
+    border-color: #ad873b;    
+}
+.hero-button a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* */
+.hero-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("./imagenes/hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    min-height: 600px;
+    padding: 4rem 2rem;
+}
+
+
+/* ABOUT */
+.about-section{
+    margin-top: 80px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem ;
+    background-color: #faf9f6 ;
+}
+
+.aboutUs-icons{
+    font-size: 40px;
+
+}
+
+.about-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.whoWeAre{
+    text-align: center;
+    color: #cc8f33;
+    font-size: 19px;
+    font-weight: 450;
+    letter-spacing: 3px;
+    
+}
+
+.about-us{
+    font-size: 60px;
+    text-align: center;
+
+}
+
+.aboutplg{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    padding-top: 100px;
+}
+
+.abt-img{
+    border-radius: 50%;
+}
+
+.about-cnt{
+    text-align: center;
+    font-size: 20px;
+}
+
+.line{
+    margin-top: 50px;
+    height: 80px;
+    width: 2px;
+    background-color: #bc9b59;
+}
+
+
+/* */
+.footer-container{
+    margin-top: 100px;
+    background-color: #212329;
+    padding: 4rem 0 4rem 0;
+}
+
+
+/* */
+.footer{
+    width: 80%;
+    padding: 3rem 1rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+}
+/* */
+.footer-heading{
+    display: flex;
+    flex-direction: column;
+    margin-right: 4rem;
+}
+
+/* */
+.footer-heading h2{
+    margin-bottom: 2rem;
+
+}
+
+/* */
+.footer-heading a{
+    color: white;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+/* */
+.footer-heading a:hover{
+    color: #bc9b59;
+    transition: 0.3s ease-out;
+}
+
+/* */
+.atAB{
+    color: white;
+    text-align: center;
+}
+
+/* */
+.hr{
+    color: white;
+}
+
+/* STARTING DESIGN OF HOUSE-CARDS!  (BELOW)*/
+.house-cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.houses-main{
+    box-shadow: 0px 0.5px 5px grey;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.houses-main:hover{
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.35);
+}
+
+.house{ 
+    height: 400px;
+    width: 500px;
+    min-height: 350px;
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0px 0.5px 3px grey;
+    overflow: hidden;
+}
+
+.houseMainImg{
+    box-shadow: 0px 0.5px 3px grey;
+    overflow: hidden;
+    width: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    display: block;
+    transition: transform 0.3s ease;   
+}
+
+
+.houseImage{
+    border-radius: 15px 15px 0px 0px;
+}
+
+.status{
+    position: absolute;
+    color: #f6f6f6;
+    right: 10px;
+    top: 10px;
+
+    height: 24px;
+    width: 80px;
+    background-color: #bc9b59;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.characteristics{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.characteristics > p{
+    font-size: 18px;
+
+}
+
+
+.characteristics > .price{
+    font-size: 30px;
+    font-weight: 800;
+}
+
+
+.price, .webText{
+    font-family: "Caudex", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+footer{
+    background-image: url("./imagenes/footer-background.png");
+    width: auto;
+    height: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    
+}
+
+.footer-sections{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 250px;
+    padding-top: 100px;
+}
+
+.footer-column1{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+.footer-column2{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px;
+
+}
+
+.footer-column3{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px;
+}
+
+.title-footer{
+    color: #bc9b59;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.subheading-footer{
+    color: white;
+}
+
+.footer-icons{
+    padding-right: 5px;
+    padding-bottom: 2px;
+    
+}
+
+.social-media-Icons{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    font-size: 20px;
+}
+
+.noCopyright-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.copyright-line{
+    width: 1200px;
+    height: 1.8px;             
+    background-color: #bc9b59;
+    border: none;
+}
+
+.noCopyright-text{
+    color: grey;
+}
+
+
+/*-------      House Detail HTML CODE    ----------*/
+
+/* ── LAYOUT ── */
+.page-layout {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 24px 40px 80px;
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 32px;
+    align-items: start;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 0;
+}
+
+.right-column {
+    position: sticky;
+    top: 140px;
+}
+
+/* ── GALLERY ── */
+.gallery-wrap {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(26,23,20,0.10);
+}
+
+.main-image-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    cursor: zoom-in;
+}
+.main-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 60%;
+    transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.3s ease;
+    display: block;
+}
+.main-image-wrap img.fade-out { opacity: 0; transform: scale(1.03); }
+.main-image-wrap img.fade-in  { opacity: 1; transform: scale(1); }
+
+.img-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.88);
+    border: none;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #1a1714;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    transition: background 0.2s, transform 0.2s;
+    z-index: 5;
+}
+.img-nav:hover { background: #fff; transform: translateY(-50%) scale(1.08); }
+.img-nav.prev { left: 14px; }
+.img-nav.next { right: 14px; }
+
+.status-badge {
+    position: absolute;
+    top: 16px; left: 16px;
+    background-color: #ad873b;
+    color: #fff;
+    padding: 5px 14px;
+    border-radius: 20px;
+    z-index: 5;
+    font-family: "Caudex", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.img-counter {
+    position: absolute;
+    bottom: 14px; right: 14px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 0.78rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    z-index: 5;
+    backdrop-filter: blur(4px);
+}
+
+.thumbnails {
+    display: flex;
+    gap: 10px;
+    padding: 14px 16px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #e4ddd3 transparent;
+}
+.thumbnails::-webkit-scrollbar { height: 4px; }
+.thumbnails::-webkit-scrollbar-thumb { background: #e4ddd3; border-radius: 2px; }
+
+.thumb {
+    flex: 0 0 110px;
+    height: 74px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2.5px solid transparent;
+    transition: border-color 0.22s, transform 0.22s, box-shadow 0.22s;
+}
+.thumb:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.15); }
+.thumb.active { border-color: #C9A84C; box-shadow: 0 4px 16px rgba(201,168,76,0.4); }
+.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* ── LIGHTBOX ── */
+.lightbox {
+    position: fixed; inset: 0;
+    background: rgba(10,8,6,0.93);
+    z-index: 1000;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.3s;
+    backdrop-filter: blur(6px);
+}
+.lightbox.open { opacity: 1; pointer-events: all; }
+.lightbox img {
+    max-width: 90vw; max-height: 85vh;
+    object-fit: contain; border-radius: 8px;
+    transform: scale(0.92);
+    transition: transform 0.35s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.lightbox.open img { transform: scale(1); }
+.lightbox-close {
+    position: absolute; top: 20px; right: 24px;
+    background: rgba(255,255,255,0.12); border: none; color: #fff;
+    font-size: 1.4rem; width: 44px; height: 44px;
+    border-radius: 50%; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+}
+.lightbox-close:hover { background: rgba(255,255,255,0.22); }
+.lightbox-nav {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: rgba(255,255,255,0.12); border: none; color: #fff;
+    width: 50px; height: 50px; border-radius: 50%;
+    cursor: pointer; font-size: 1.3rem;
+    display: flex; align-items: center; justify-content: center; z-index: 1001;
+}
+.lightbox-nav:hover { background: rgba(255,255,255,0.22); }
+.lightbox-prev { left: 24px; }
+.lightbox-next { right: 24px; }
+
+/* ── CONTACT CARD ── */
+.contact-div {
+    position: static;
+    margin: 0;
+    box-shadow: 0px 0.5px 2px grey;
+    transition: box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+.container-contact {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.contact-agenttitle {
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 15px;
+    padding-top: 10px;
+}
+
+.items-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.items-contact a{
+    width: 100%;
+}
+
+.iconhousedetail{
+    font-size: 25px;
+}
+
+
+.numdetail{
+    font-size: 25px;
+    font-weight: 450;
+}
+
+.contact-button {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    color: rgb(173, 135, 59);
+    border: rgb(173, 135, 59) solid 1px;
+    cursor: pointer;
+}
+
+.contact-line { width: 80%; }
+
+.whatsapp {
+    background-color: #25d366;
+    color: white;
+    border: none;
+}
+
+.email:hover { background-color: #ad873b; color: white; }
+.call:hover  { background-color: #ad873b; color: white; }
+.email-icon:hover { color: white; }
+
+.contact-callMail { margin-left: 20px; }
+.icon-contact { font-size: 15px; }
+
+/* ── PROPERTY DETAILS ── */
+.containter-characteristics {
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0.5px 5px grey;
+    border-radius: 10px;
+    padding: 20px;
+
+    
+
+
+
+}
+
+.descriptionFlex {
+    display: flex;
+    flex-direction: column;
+}
+
+.titledescritpion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    top: 10px;
+}
+
+.char-price { 
+    color: #ad873b;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 530;
+    font-size: 39px;
+    font-style: normal;
+    
+}
+
+.locationchar{
+    padding-top: 10px;
+}
+
+.textchar{
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 530;
+    font-size: 20px;
+
+}
+
+.status-badgeChar {
+    position: absolute;
+    color: #fff;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-family: "Caudex", serif;
+    top: 0;
+    right: 0;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #ad873b;
+}
+
+.description-line {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.bedrooms, .baths, .metersSquared {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-char {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+/* ── AMENITIES ── */
+.amenities-container {
+    width: 100%;
+}
+
+.amenities-characteristics {
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0.5px 5px grey;
+    transition: box-shadow 0.3s ease;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.amenities {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.amenities1-4, .amenities5-8 {
+    flex: 1;
+}
+
+.fa-circle-check { font-size: 16px; }
+
+
+
+/* ── HAMBURGER ── */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    margin-right: 20px;
+    z-index: 20;
+}
+
+.hamburger span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #ad873b;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger X animation */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+
+
+
+
+/* ── RESPONSIVE 900px ── */
+@media (max-width: 900px) {
+    .page-layout {
+        grid-template-columns: 1fr;
+        padding: 16px 20px 60px;
+    }
+    .right-column {
+        position: static;
+        order: 1;
+    }
+    .container-contact { width: 100%; }
+    .amenities { flex-direction: column; }
+}
+
+
+/* ── TABLET (768px) ── */
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    .navbar {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+    .navbar ul {
+        gap: 20px;
+        padding-right: 0;
+        flex-wrap: wrap;
+        height: auto;
+        padding-bottom: 10px;
+    }
+    .navbar-items a {
+        font-size: 16px;
+    }
+
+    /* HERO */
+    .hero-heading {
+        font-size: 42px;
+    }
+    .hero-par {
+        font-size: 20px;
+        text-align: center;
+    }
+    .hero-button {
+        font-size: 18px;
+        width: 220px;
+        height: 45px;
+    }
+
+    /* PORTFOLIO TEXT */
+    .h2Text {
+        font-size: 40px;
+    }
+
+    /* PROPERTY CARDS */
+    .house-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 40px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    /* ABOUT */
+    .about-us {
+        font-size: 40px;
+    }
+    .aboutplg {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding-top: 40px;
+    }
+    .line {
+        width: 80px;
+        height: 2px;
+    }
+
+    /* FOOTER */
+    .footer-sections {
+        flex-direction: column;
+        gap: 40px;
+        padding-top: 60px;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-column1, .footer-column2, .footer-column3 {
+        align-items: center;
+        padding-bottom: 0;
+    }
+    .copyright-line {
+        width: 90%;
+    }
+
+    /* HOUSE DETAIL */
+    .page-layout {
+        grid-template-columns: 1fr;
+        padding: 16px 20px 60px;
+        margin: 20px auto;
+    }
+    .right-column {
+        position: static;
+        order: 1;
+    }
+    .amenities {
+        flex-direction: column;
+    }
+    .info-char {
+        gap: 20px;
+    }
+}
+
+
+/* ── MOBILE (480px) ── */
+@media (max-width: 480px) {
+
+    /* NAVBAR */
+    .navbar ul {
+        gap: 12px;
+        justify-content: center;
+    }
+    .navbar-items a {
+        font-size: 14px;
+    }
+    .logo {
+        height: 80px !important;
+    }
+
+    /* HERO */
+    .hero-heading {
+        font-size: 28px;
+    }
+    .hero-par {
+        font-size: 16px;
+    }
+    .hero-button {
+        font-size: 16px;
+        width: 190px;
+        height: 42px;
+    }
+    .hero-box {
+        min-height: 400px;
+        padding: 2rem 1rem;
+    }
+
+    /* PORTFOLIO TEXT */
+    .h2Text {
+        font-size: 28px;
+    }
+    .portfolio {
+        font-size: 14px;
+    }
+
+    /* PROPERTY CARDS */
+    .pds-house {
+        max-width: 100%;
+    }
+    .house-cards {
+        padding: 0 12px;
+    }
+    .characteristics > .price {
+        font-size: 22px;
+    }
+    .characteristics > p {
+        font-size: 15px;
+    }
+
+    /* ABOUT */
+    .about-us {
+        font-size: 30px;
+    }
+    .about-section {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 2rem 1rem;
+    }
+    .aboutUs-icons {
+        font-size: 30px;
+    }
+    .about-cnt {
+        font-size: 16px;
+    }
+
+    /* FOOTER */
+    .footer-sections {
+        gap: 30px;
+        padding-top: 40px;
+    }
+    .plg-footerIcon {
+        width: 200px !important;
+        height: auto !important;
+    }
+    .copyright-line {
+        width: 90%;
+    }
+    .social-media-Icons {
+        justify-content: center;
+    }
+
+    /* WHATSAPP BUTTON */
+    .whatsapp-ico {
+        width: 55px;
+        height: 55px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    /* HOUSE DETAIL */
+    .page-layout {
+        padding: 12px 12px 40px;
+    }
+    .char-price {
+        font-size: 28px;
+    }
+    .titledescritpion h2 {
+        font-size: 20px;
+    }
+    .info-char {
+        gap: 15px;
+    }
+    .contact-button {
+        height: 44px;
+        font-size: 15px;
+    }
+    .amenities-characteristics {
+        padding: 15px;
+    }
+
+
+}
+
+
+@media (max-width: 600px) {
+    .house-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+/* ── LARGE DESKTOP (1280px+) ── */
+@media (min-width: 1280px) {
+    .page-layout {
+        max-width: 1200px;
+    }
+    .hero-heading {
+        font-size: 80px;
+    }
+    .footer-sections {
+        gap: 300px;
+    }
+}
