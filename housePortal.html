@@ -4,7 +4,7 @@
     <head>    
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css?v=11">
+        <link rel="stylesheet" href="style.css?v=12">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="icon" type="image/png" href="./imagenes/favicon-plg-modified.png">
         <title>Palm Living Group</title>
@@ -12,21 +12,27 @@
         <!-- GOOGLE FONTS -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
         
         <!-- Font Awesome (For icons) -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     </head>
 
-    <body>
+    <body class="detail-page">
 
         <header class="header">
             <nav class="navbar">
-                <img class="img logo" src="./imagenes/plg-icon.png" height="120px">
+                <a href="index.html" aria-label="Palm Living Group Home">
+                    <img class="img logo" src="./imagenes/plg-icon.png" height="120px">
+                </a>
 
-                <ul class="navbar-items">
-                    <li><a href="index.html">Home</a></li>
+                <button class="hamburger" id="hamburger" type="button" onclick="toggleMenu()" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
 
+                <ul class="navbar-items" id="navMenu">
     <li>
         <a href="index.html#propiedades">
             Propiedades
@@ -247,6 +253,6 @@
             </div>
         </footer>
 
-        <script type="text/javascript" src="./indexPortalHouse.js?v=11"></script>
+        <script type="text/javascript" src="./indexPortalHouse.js?v=12"></script>
     </body>
 </html>

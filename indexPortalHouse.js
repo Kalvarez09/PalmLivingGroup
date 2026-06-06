@@ -1,3 +1,37 @@
+function closeMobileMenu() {
+  const navMenu = document.getElementById('navMenu');
+  const hamburger = document.getElementById('hamburger');
+
+  navMenu?.classList.remove('open');
+  hamburger?.classList.remove('active');
+  hamburger?.setAttribute('aria-expanded', 'false');
+  hamburger?.setAttribute('aria-label', 'Abrir men\u00fa');
+}
+
+window.toggleMenu = function toggleMenu() {
+  const navMenu = document.getElementById('navMenu');
+  const hamburger = document.getElementById('hamburger');
+
+  if (!navMenu || !hamburger) return;
+
+  const isOpen = navMenu.classList.toggle('open');
+  hamburger.classList.toggle('active', isOpen);
+  hamburger.setAttribute('aria-expanded', String(isOpen));
+  hamburger.setAttribute('aria-label', isOpen ? 'Cerrar men\u00fa' : 'Abrir men\u00fa');
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('#navMenu a').forEach((link) => {
+    link.addEventListener('click', closeMobileMenu);
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      closeMobileMenu();
+    }
+  });
+});
+
 const images = [
   {
     src:   "imagenes/portaldelbosque/casaPortal.png",

@@ -4,7 +4,7 @@
 <head>    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css?v=11">
+    <link rel="stylesheet" href="style.css?v=12">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="./imagenes/favicon-plg-modified.png">
     <title>Palm Living Group</title>
@@ -28,17 +28,18 @@
     <header class="header">
         <nav class="navbar">
 
-            <img class="img logo" src="./imagenes/plg-icon.png" height="120px">
+            <a href="index.html" aria-label="Palm Living Group Home">
+                <img class="img logo" src="./imagenes/plg-icon.png" height="120px">
+            </a>
 
 
-            <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <button class="hamburger" id="hamburger" type="button" onclick="toggleMenu()" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
         <ul class="navbar-items" id="navMenu">
-            <li><a href="#top" onclick="scrollTo(0,0); return false;">Home</a></li>
             <li><a href="#propiedades" onclick="document.getElementById('propiedades').scrollIntoView({behavior:'smooth'}); history.replaceState(null,'',window.location.pathname); return false;">Propiedades</a></li>
             <li><a href="#sobre-nosotros" onclick="document.getElementById('sobre-nosotros').scrollIntoView({behavior:'smooth'}); history.replaceState(null,'',window.location.pathname); return false;">Sobre Nosotros</a></li>
             <li><a href="#contacto" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'}); history.replaceState(null,'',window.location.pathname); return false;">Contacto</a></li>
@@ -86,7 +87,37 @@
         <div class="hero-box">
             <h1 class="hero-heading webText">Encuentra la Propiedad Ideal para Ti<br></h1>
             <p class="hero-par">Explora casas en renta y en venta sin complicaciones</p>
-            <button class="button hero-button"><a href="#propiedades">Explorar Propiedades</a></button>
+            <section class="property-filters" aria-label="Filtros de propiedades">
+                <form class="filter-panel" id="propertyFilters">
+                    <label class="filter-field">
+                        <span>País</span>
+                        <select id="filterCountry"></select>
+                    </label>
+
+                    <label class="filter-field">
+                        <span>Ciudad</span>
+                        <select id="filterCity"></select>
+                    </label>
+
+                    <label class="filter-field">
+                        <span>Barrio</span>
+                        <select id="filterNeighborhood"></select>
+                    </label>
+
+                    <label class="filter-field">
+                        <span>Operación</span>
+                        <select id="filterTransaction"></select>
+                    </label>
+
+                    <label class="filter-field">
+                        <span>Tipo</span>
+                        <select id="filterType"></select>
+                    </label>
+
+                    <button class="filter-search" type="submit" id="filterSearch">Buscar</button>
+                    <button class="filter-reset" type="button" id="filterReset">Limpiar</button>
+                </form>
+            </section>
         </div>
     </section>
         
@@ -100,69 +131,11 @@
 
 
     </section>
-    
 
     <section id="propiedades" class="propertiesHome">
-        
-        <div class="propertiesHome">
-            <div class="SPS">
-
-                    <div class="house-cards">
-                        <div class="house  houses-main">
-                            <a href="./house-detail.html" style="text-decoration: none; color: inherit;">    
-
-                                <div class="status">
-                                    <p class="webText">En Renta</p>
-                                </div>
-
-                                        
-                                <img class="houseImage houseMainImg" src="./imagenes/yellowHouse.jpeg" height="250px" width="400px">
-
-                                <div class="characteristics">
-                                    <h4 class="price webText">USD 2300/mes</h4>
-                                    <p class="webText"> 4 habitaciones | 5 baños  </p>
-                                    <p class="webText location">San Pedro Sula, Honduras</p>
-                                            
-
-                                </div>
-
-                            </a>
-
-                        </div>
-
-                        
-                            <div class="house houses-main">
-                            <a href="./housePortal.html" style="text-decoration: none; color: inherit;">    
-
-                                <div class="status">
-                                    <p class="webText">En Renta</p>
-                                </div>
-
-                                <img class="houseImage houseMainImg" src="./imagenes/portaldelbosque/portalHouseFachada.png" height="250px" width="400px">
-
-                                <div class="characteristics">
-                                    <h4 class="price webText">USD 1180/mes</h4>
-                                    <p class="webText">3 habitaciones | 4 baños</p>
-                                    <p class="webText location">Tegucigalpa, Honduras</p>
-                                </div>
-
-
-
-                            </div>
-                            
-
-                    </div>
-
-            </div>
-
-
-
-            
-            
-
-            
-
-
+        <div class="propertiesHomeInner">
+            <div class="house-cards" id="propertyGrid" aria-live="polite"></div>
+            <p class="property-empty webText" id="propertyEmpty" hidden>No hay propiedades disponibles con esos filtros. Vuelve a buscar en un tiempo.</p>
         </div>
     
     </section>
@@ -172,50 +145,78 @@
             
 
 
-    <section id="sobre-nosotros">
-        <div class="about-section"> 
-
-            <div class="about-text">
-                <h3 class="about-us">Sobre Nosotros</h3>
-                <hr class="home-line">
-            </div>    
-
-            <div class="aboutplg">
-
-                <div class="direct-contact about-cnt">
-                    <i class="fa-regular fa-address-book aboutUs-icons" style="color: rgb(173, 135, 59);"></i>
-                    <h4>Contacto Directo</h4>
-                    <p>Sin intermediarios innecesarios</p>
-                </div>
-
-
-                <div class="line"></div>
-
-                <div class="clear-info about-cnt">
-                    <i class="fa-solid fa-circle-info aboutUs-icons" style="color: rgb(173, 135, 59);"></i>
-                    <h4>Información clara</h4>
-                    <p>Datos reales y actualizados</p>
-                </div>
-
-                <div class="line"></div>
-
-
-                <div class="personalised-att about-cnt">
-                    <i class="fa-solid fa-person-circle-exclamation aboutUs-icons" style="color: rgb(173, 135, 59);"></i>
-                    <h4>Atención personalizada</h4>
-                    <p>Te acompañamos en todo el proceso</p>
-                </div>
-
+    <section id="sobre-nosotros" class="why-choose-section">
+        <div class="why-choose-container">
+            <div class="why-choose-header">
+                <p class="why-choose-kicker">CONFIANZA INMOBILIARIA</p>
+                <h2>¿Por qué elegir Palm Living Group?</h2>
+                <p>
+                    Conectamos personas con propiedades seleccionadas en Tegucigalpa y San Pedro Sula,
+                    ofreciendo una experiencia clara, directa y confiable desde el primer contacto.
+                </p>
             </div>
 
+            <div class="why-choose-carousel" aria-label="Razones para elegir Palm Living Group">
+                <button class="why-carousel-arrow why-carousel-prev" type="button" aria-label="Ver razón anterior">
+                    <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                </button>
+
+                <div class="why-choose-grid">
+                    <article class="why-card">
+                        <div class="why-card-icon">
+                            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="why-card-title">Propiedades verificadas</h3>
+                        <p class="why-card-text">
+                            Publicamos propiedades con información revisada, fotografías reales y detalles relevantes para ayudarte a tomar una decisión segura.
+                        </p>
+                    </article>
+
+                    <article class="why-card">
+                        <div class="why-card-icon">
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="why-card-title">Atención directa</h3>
+                        <p class="why-card-text">
+                            Hablas directamente con nuestro equipo por WhatsApp, sin procesos complicados ni intermediarios innecesarios.
+                        </p>
+                    </article>
+
+                    <article class="why-card">
+                        <div class="why-card-icon">
+                            <i class="fa-solid fa-clipboard-check" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="why-card-title">Información clara</h3>
+                        <p class="why-card-text">
+                            Te compartimos datos importantes como ubicación, precio, características, disponibilidad y condiciones desde el inicio.
+                        </p>
+                    </article>
+
+                    <article class="why-card">
+                        <div class="why-card-icon">
+                            <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="why-card-title">Oportunidades estratégicas</h3>
+                        <p class="why-card-text">
+                            Nos enfocamos en propiedades con potencial para vivir, alquilar o invertir en zonas clave de Honduras.
+                        </p>
+                    </article>
+                </div>
+
+                <button class="why-carousel-arrow why-carousel-next" type="button" aria-label="Ver siguiente razón">
+                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <div class="why-carousel-controls" aria-label="Paginación de razones">
+                <button class="why-carousel-dot active" type="button" aria-label="Ver razón 1"></button>
+                <button class="why-carousel-dot" type="button" aria-label="Ver razón 2"></button>
+                <button class="why-carousel-dot" type="button" aria-label="Ver razón 3"></button>
+                <button class="why-carousel-dot" type="button" aria-label="Ver razón 4"></button>
+            </div>
         </div>
-
-
     </section>
 
-
-
-    </section>
 
 
     <footer id="contacto">
@@ -225,7 +226,7 @@
             <div class="footer-column1">
 
                 <img class="plg-footerIcon" src="./imagenes/plg-footer-icon.png" height="180px" width="300px">
-                <p class="paragraph-footer" style="color: white;">Te ayudamos a encontrar la propiedad<br> ideal para ti. Confianza, transparencia<br> y atención personalizada.</p>
+                <p class="paragraph-footer" style="color: white;">Te ayudamos a encontrar la propiedad ideal para ti. Confianza, transparencia y atención personalizada.</p>
 
                 <div class="social-media-Icons">
                     <a href="https://www.instagram.com/palmlivinggroup.hn/" target="_blank"><i class="fa-brands fa-instagram" style="color: rgb(173, 135, 59);"></i></a>
@@ -235,7 +236,6 @@
                                 
 
                 </div>
-
             </div>
 
 
@@ -246,8 +246,8 @@
 
 
                 <p class="subheading-footer"><i class="footer-icons fa-solid fa-house" style="color: rgb(173, 135, 59);"></i>Propiedades</p>
-                <p class="subheading-footer"><i class="footer-icons fa-solid fa-address-book" style="color: rgb(173, 135, 59);"></i>Contacto</p>
                 <p class="subheading-footer"><i class="footer-icons fa-solid fa-info" style="color: rgb(173, 135, 59);"></i>Sobre Nosotros</p>
+                <p class="subheading-footer"><i class="footer-icons fa-solid fa-address-book" style="color: rgb(173, 135, 59);"></i>Contacto</p>
 
             </div>
 
@@ -265,6 +265,8 @@
             </div>
 
         </div>
+
+        <p class="footer-verse">Proverbios 16:3</p>
 
 
         <div class="noCopyright-section">
@@ -298,8 +300,9 @@
 
 
 
-
-    <script type="text/javascript" src="./index.js?v=11"></script>
+    <script type="text/javascript" src="./properties.js?v=12"></script>
+    <script type="text/javascript" src="./home.js?v=12"></script>
+    <script type="text/javascript" src="./index.js?v=12"></script>
 </body>
 
 

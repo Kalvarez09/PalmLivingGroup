@@ -1,3 +1,37 @@
+function closeMobileMenu() {
+  const navMenu = document.getElementById('navMenu');
+  const hamburger = document.getElementById('hamburger');
+
+  navMenu?.classList.remove('open');
+  hamburger?.classList.remove('active');
+  hamburger?.setAttribute('aria-expanded', 'false');
+  hamburger?.setAttribute('aria-label', 'Abrir men\u00fa');
+}
+
+window.toggleMenu = function toggleMenu() {
+  const navMenu = document.getElementById('navMenu');
+  const hamburger = document.getElementById('hamburger');
+
+  if (!navMenu || !hamburger) return;
+
+  const isOpen = navMenu.classList.toggle('open');
+  hamburger.classList.toggle('active', isOpen);
+  hamburger.setAttribute('aria-expanded', String(isOpen));
+  hamburger.setAttribute('aria-label', isOpen ? 'Cerrar men\u00fa' : 'Abrir men\u00fa');
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('#navMenu a').forEach((link) => {
+    link.addEventListener('click', closeMobileMenu);
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      closeMobileMenu();
+    }
+  });
+});
+
 const images = [
   {
     src:   "imagenes/puertadelsolimagenes/yellowHouse - Copy.jpeg",
@@ -111,6 +145,14 @@ const images = [
   const thumbsEl = document.getElementById('thumbnails');
   const lightbox = document.getElementById('lightbox');
   const lbImg    = document.getElementById('lbImg');
+  const prevBtn  = document.getElementById('prevBtn');
+  const nextBtn  = document.getElementById('nextBtn');
+  const mainWrap = document.getElementById('mainWrap');
+  const lbClose  = document.getElementById('lbClose');
+  const lbPrev   = document.getElementById('lbPrev');
+  const lbNext   = document.getElementById('lbNext');
+
+if (mainImg && counter && thumbsEl && lightbox && lbImg && prevBtn && nextBtn && mainWrap && lbClose && lbPrev && lbNext) {
 
   function buildThumbs() {
     thumbsEl.innerHTML = '';
@@ -142,18 +184,18 @@ const images = [
     lbImg.src = images[current].src;
   }
 
-  document.getElementById('prevBtn').addEventListener('click', () => switchTo(current - 1));
-  document.getElementById('nextBtn').addEventListener('click', () => switchTo(current + 1));
+  prevBtn.addEventListener('click', () => switchTo(current - 1));
+  nextBtn.addEventListener('click', () => switchTo(current + 1));
 
-  document.getElementById('mainWrap').addEventListener('click', (e) => {
+  mainWrap.addEventListener('click', (e) => {
     if (e.target.closest('.img-nav')) return;
     lbImg.src = images[current].src;
     lightbox.classList.add('open');
   });
 
-  document.getElementById('lbClose').addEventListener('click', () => lightbox.classList.remove('open'));
-  document.getElementById('lbPrev').addEventListener('click', (e) => { e.stopPropagation(); switchTo(current - 1); });
-  document.getElementById('lbNext').addEventListener('click', (e) => { e.stopPropagation(); switchTo(current + 1); });
+  lbClose.addEventListener('click', () => lightbox.classList.remove('open'));
+  lbPrev.addEventListener('click', (e) => { e.stopPropagation(); switchTo(current - 1); });
+  lbNext.addEventListener('click', (e) => { e.stopPropagation(); switchTo(current + 1); });
   lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.classList.remove('open'); });
 
   document.addEventListener('keydown', (e) => {
@@ -168,6 +210,7 @@ mainImg.src   = images[0].src;
 mainImg.alt   = images[0].alt;
 lbImg.src     = images[0].src;
 counter.textContent = `1 / ${images.length}`;
+}
 
 
 
