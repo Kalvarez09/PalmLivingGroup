@@ -1189,6 +1189,11 @@ body.detail-page {
     margin-left: auto;
 }
 
+.status-badge.status-sale,
+.status-badgeChar.status-sale {
+    background: linear-gradient(135deg, #224f3a, #2f7a5a);
+}
+
 .description-line {
     width: 90%;
     height: 1px;
