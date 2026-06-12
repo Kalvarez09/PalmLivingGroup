@@ -706,18 +706,50 @@
     font-weight: 800;
 }
 
-.property-card-link{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+.property-card-link,
+.property-card-image-link,
+.property-card-copy-link{
     text-decoration: none;
     color: inherit;
+}
+
+.property-card-image-link{
+    display: block;
 }
 
 .property-card-content{
     display: flex;
     flex-direction: column;
     gap: 7px;
+}
+
+.property-card-copy-link{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.property-whatsapp-cta{
+    align-self: flex-start;
+    margin: 2px 0 4px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: #b8935a;
+    border: 1px solid #b8935a;
+    color: #ffffff;
+    font-family: "Caudex", serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    box-shadow: 0 8px 16px rgba(184, 147, 90, 0.22);
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.property-whatsapp-cta:hover{
+    background: #8f6c2b;
+    border-color: #8f6c2b;
+    transform: translateY(-1px);
 }
 
 .property-type{
@@ -733,6 +765,19 @@
     font-size: 23px;
     line-height: 1.14;
     margin: 0;
+}
+
+.property-unavailable{
+    align-self: flex-start;
+    margin: 2px 0 0;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #fff7e8;
+    border: 1px solid rgba(184, 147, 90, 0.42);
+    color: #7a5e2b;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
 .property-meta,
@@ -1202,7 +1247,7 @@ body.detail-page {
     background-color: rgba(184, 147, 90, 0.75);
 }
 
-.bedrooms, .baths, .metersSquared {
+.bedrooms, .baths, .livingRooms, .metersSquared {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1212,7 +1257,7 @@ body.detail-page {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 36px;
 }
 
 /* ── AMENITIES ── */

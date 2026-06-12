@@ -78,29 +78,46 @@
   }
 
   function formatMeta(property) {
-    return `${property.beds} habitaciones | ${property.baths} ba\u00f1os | ${property.areaM2} m\u00b2`;
+    const livingRooms = property.livingRooms ? ` | ${property.livingRooms} salas` : "";
+    return `${property.beds} habitaciones | ${property.baths} ba\u00f1os${livingRooms} | ${property.areaM2} m\u00b2`;
+  }
+
+  function getWhatsAppUrl(property) {
+    const message = `Hola, me interesa recibir el precio de ${property.title} en ${property.city}.`;
+    return `https://wa.me/50498547689?text=${encodeURIComponent(message)}`;
   }
 
   function renderPropertyCard(property) {
     const badgeClass = property.transaction === "sale" ? "status-sale" : "status-rent";
+    const showPriceContact = property.priceLabel.toLowerCase().includes("cont");
 
     return `
       <article class="house houses-main property-card">
-        <a class="property-card-link" href="${property.detailUrl}" aria-label="Ver ${property.title}">
+        <a class="property-card-image-link" href="${property.detailUrl}" aria-label="Ver ${property.title}">
           <div class="status ${badgeClass}">
             <p class="webText">${property.transactionLabel}</p>
           </div>
 
           <img class="houseImage houseMainImg" src="${property.thumbnail}" alt="${property.title}" loading="lazy">
+        </a>
 
-          <div class="characteristics property-card-content">
+        <div class="characteristics property-card-content">
+          <a class="property-card-copy-link" href="${property.detailUrl}" aria-label="Ver detalles de ${property.title}">
             <p class="property-type webText">${property.propertyTypeLabel}</p>
             <h3 class="property-title webText">${property.title}</h3>
             <h4 class="price webText">${property.priceLabel}</h4>
+            ${property.available === false ? `<p class="property-unavailable webText">${property.availabilityLabel || "No disponible en este momento"}</p>` : ""}
+          </a>
+          ${showPriceContact ? `
+            <a class="property-whatsapp-cta" href="${getWhatsAppUrl(property)}" target="_blank" rel="noopener">
+              Consultar por WhatsApp
+            </a>
+          ` : ""}
+          <a class="property-card-copy-link" href="${property.detailUrl}" aria-label="Ver ubicación y características de ${property.title}">
             <p class="webText property-meta">${formatMeta(property)}</p>
             <p class="webText location">${property.city}, ${property.country}</p>
-          </div>
-        </a>
+          </a>
+        </div>
       </article>
     `;
   }

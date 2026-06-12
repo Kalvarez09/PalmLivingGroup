@@ -12,11 +12,12 @@ window.PLG_PROPERTIES = [
     propertyTypeLabel: "Casa",
     currency: "USD",
     price: 695000,
-    priceLabel: "USD 695,000",
+    priceLabel: "Contáctanos para el precio",
     beds: 4,
     baths: 5,
+    livingRooms: 4,
     areaM2: 480,
-    thumbnail: "./imagenes/yellowHouse.jpeg",
+    thumbnail: "./imagenes/puertadelsolimagenes/casaAmarillaSPS.jpg",
     detailUrl: "./house-detail.html",
     published: true,
     paidActive: true
@@ -41,6 +42,8 @@ window.PLG_PROPERTIES = [
     thumbnail: "./imagenes/portaldelbosque/portalHouseFachada.png",
     detailUrl: "./housePortal.html",
     published: true,
-    paidActive: true
+    paidActive: true,
+    available: false,
+    availabilityLabel: "No disponible en este momento"
   }
 ];

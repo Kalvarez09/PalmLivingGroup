@@ -34,107 +34,99 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const images = [
   {
-    src:   "imagenes/puertadelsolimagenes/yellowHouse - Copy.jpeg",
-    thumb: "imagenes/puertadelsolimagenes/yellowHouse - Copy.jpeg",
-    alt:   "Vista exterior"
+    src:   "imagenes/puertadelsolimagenes/casaAmarillaSPS.jpg",
+    thumb: "imagenes/puertadelsolimagenes/casaAmarillaSPS.jpg",
+    alt:   "Fachada principal"
   },
   {
-    src:   "imagenes/puertadelsolimagenes/backimgpuertadelsolhouse.jpeg",
-    thumb: "imagenes/puertadelsolimagenes/backimgpuertadelsolhouse.jpeg",
-    alt:   "Vista trasera"
+    src:   "imagenes/puertadelsolimagenes/entradalateralfoto.jpeg",
+    thumb: "imagenes/puertadelsolimagenes/entradalateralfoto.jpeg",
+    alt:   "Entrada lateral"
   },
   {
     src:   "imagenes/puertadelsolimagenes/backimgpuertadelsol.jpeg",
     thumb: "imagenes/puertadelsolimagenes/backimgpuertadelsol.jpeg",
-    alt:   "Fachada principal"
+    alt:   "Vista trasera"
   },
   {
     src:   "imagenes/puertadelsolimagenes/backyard.png",
     thumb: "imagenes/puertadelsolimagenes/backyard.png",
-    alt:   "Backyard"
-    
+    alt:   "Patio trasero"
   },
-
+  {
+    src:   "imagenes/puertadelsolimagenes/jardinTrasero1.jpeg",
+    thumb: "imagenes/puertadelsolimagenes/jardinTrasero1.jpeg",
+    alt:   "Jardin trasero"
+  },
+  {
+    src:   "imagenes/puertadelsolimagenes/kioskoTrasero1.jpeg",
+    thumb: "imagenes/puertadelsolimagenes/kioskoTrasero1.jpeg",
+    alt:   "Kiosko trasero"
+  },
+  {
+    src:   "imagenes/puertadelsolimagenes/arcoFotos.jpeg",
+    thumb: "imagenes/puertadelsolimagenes/arcoFotos.jpeg",
+    alt:   "Arcos de la propiedad"
+  },
+  {
+    src:   "imagenes/puertadelsolimagenes/terraza1.jpeg",
+    thumb: "imagenes/puertadelsolimagenes/terraza1.jpeg",
+    alt:   "Terraza 1"
+  },
+  {
+    src:   "imagenes/puertadelsolimagenes/terraza2.jpeg",
+    thumb: "imagenes/puertadelsolimagenes/terraza2.jpeg",
+    alt:   "Terraza 2"
+  },
+  {
+    src:   "imagenes/puertadelsolimagenes/vistaParque.jpeg",
+    thumb: "imagenes/puertadelsolimagenes/vistaParque.jpeg",
+    alt:   "Vista al parque"
+  },
+  {
+    src:   "imagenes/puertadelsolimagenes/vistaParqueLateral.jpeg",
+    thumb: "imagenes/puertadelsolimagenes/vistaParqueLateral.jpeg",
+    alt:   "Vista lateral al parque"
+  },
   {
     src:   "imagenes/puertadelsolimagenes/livingroom.jpeg",
     thumb: "imagenes/puertadelsolimagenes/livingroom.jpeg",
     alt:   "Sala de estar"
-
   },
-
   {
-    src:   "imagenes/puertadelsolimagenes/bathroom.png",
-    thumb: "imagenes/puertadelsolimagenes/bathroom.png",
-    alt:   "bathroom"
-
+    src:   "imagenes/puertadelsolimagenes/livingroom2ndfloor1.png",
+    thumb: "imagenes/puertadelsolimagenes/livingroom2ndfloor1.png",
+    alt:   "Sala segundo piso"
   },
-
+  {
+    src:   "imagenes/puertadelsolimagenes/salaset1.jpeg",
+    thumb: "imagenes/puertadelsolimagenes/salaset1.jpeg",
+    alt:   "Sala"
+  },
   {
     src:   "imagenes/puertadelsolimagenes/bedroomimg.jpeg",
     thumb: "imagenes/puertadelsolimagenes/bedroomimg.jpeg",
     alt:   "Dormitorio"
-    
   },
-
-
   {
-
     src:   "imagenes/puertadelsolimagenes/mainroom2img.png",
     thumb: "imagenes/puertadelsolimagenes/mainroom2img.png",
-    alt:   "Main Room 2"
-
+    alt:   "Habitacion principal"
   },
-
-  
-
   {
-    src:   "imagenes/puertadelsolimagenes/room2.png",
-    thumb: "imagenes/puertadelsolimagenes/room2.png",
-    alt:   "Room 2"
-    
+    src:   "imagenes/puertadelsolimagenes/jacuzzi.jpeg",
+    thumb: "imagenes/puertadelsolimagenes/jacuzzi.jpeg",
+    alt:   "Jacuzzi"
   },
-
-
   {
-    src:   "imagenes/puertadelsolimagenes/room3.png",
-    thumb: "imagenes/puertadelsolimagenes/room3.png",
-    alt:   "Room 3"
-    
+    src:   "imagenes/puertadelsolimagenes/bathPrincipal.jpeg",
+    thumb: "imagenes/puertadelsolimagenes/bathPrincipal.jpeg",
+    alt:   "Bano principal"
   },
-
   {
-    src:   "imagenes/puertadelsolimagenes/livingroom2ndfloor.png",
-    thumb: "imagenes/puertadelsolimagenes/livingroom2ndfloor.png",
-    alt:   "Livingroom 1"
-  },
-
-
-  {
-
-    src:   "imagenes/puertadelsolimagenes/livingroom2ndfloor1.png",
-    thumb: "imagenes/puertadelsolimagenes/livingroom2ndfloor1.png",
-    alt:   "Livingroom 2"
-
-
-
-  },
-
-  {
-
-    src:   "imagenes/puertadelsolimagenes/livingroom2ndfloor3.png",
-    thumb: "imagenes/puertadelsolimagenes/livingroom2ndfloor3.png",
-    alt:   "Livingroom 3"
-
-
-
-  },
-
-  {
-
     src:   "imagenes/puertadelsolimagenes/poolimg.jpeg",
     thumb: "imagenes/puertadelsolimagenes/poolimg.jpeg",
     alt:   "Piscina"
-
   }
 ];
 
